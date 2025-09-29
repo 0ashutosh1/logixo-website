@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Pages Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            background: rgba(255,255,255,0.15);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        h1 { margin-top: 0; }
+        .status { 
+            background: rgba(0,255,0,0.2); 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 GitHub Pages Test - SUCCESS!</h1>
+        <div class="status">
+            <h2>✅ Basic GitHub Pages is Working!</h2>
+            <p>This confirms GitHub Pages can serve static files from your repository.</p>
+        </div>
+        <p><strong>Repository:</strong> logixo-website</p>
+        <p><strong>Owner:</strong> 0ashutosh1</p>
+        <p><strong>Current URL:</strong> <span id="url"></span></p>
+        <p><strong>Loaded at:</strong> <span id="time"></span></p>
+    </div>
+    
+    <script>
+        document.getElementById('url').textContent = window.location.href;
+        document.getElementById('time').textContent = new Date().toLocaleString();
+        console.log('✅ GitHub Pages test successful!');
+        console.log('URL:', window.location.href);
+    </script>
+</body>
+</html>

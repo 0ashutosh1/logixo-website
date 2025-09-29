@@ -6,11 +6,13 @@
   "homepage": "https://0ashutosh1.github.io/logixo-website",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp -r dist/* docs/",
+    "build:win": "vite build && xcopy dist docs /E /I /Y",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build:win",
+    "deploy": "gh-pages -d dist",
+    "deploy:docs": "npm run build:win && git add docs && git commit -m \"Update GitHub Pages\" && git push"
   },
   "dependencies": {
     "react": "^18.2.0",
